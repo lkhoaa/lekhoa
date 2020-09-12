@@ -1,0 +1,130 @@
+{
+  "id": "2f1ddca3-4e6f-4182-b86f-4bd3901fd99a",
+  "version": "2.0",
+  "name": "test",
+  "url": "http://the-internet.herokuapp.com",
+  "tests": [{
+    "id": "85963666-2c46-4283-810d-00e657a9da9a",
+    "name": "login invalid account",
+    "commands": [{
+      "id": "385b9433-46e7-4a3f-bb58-54768e71cef5",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e92518fd-0203-4336-a510-56e6b80c3d32",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "38f9794d-13c9-4fc6-916b-4d3bcfb016d4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Form Authentication",
+      "targets": [
+        ["linkText=Form Authentication", "linkText"],
+        ["css=li:nth-child(21) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Form Authentication')]", "xpath:link"],
+        ["xpath=//div[@id='content']/ul/li[21]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//li[21]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Form Authentication')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2853071-9383-4b69-b624-ea74927c8c25",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(1) > .large-6",
+      "targets": [
+        ["css=.row:nth-child(1) > .large-6", "css:finder"],
+        ["xpath=//form[@id='login']/div/div", "xpath:idRelative"],
+        ["xpath=//form/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9446a481-8739-435c-9594-83fa5f263a7b",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e7f1a3cb-cb89-4766-80c3-0f6faffbfd02",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "lkhoaa"
+    }, {
+      "id": "c0efcaf6-68fe-448d-aa3c-1739732bf2ed",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "lekhoa1994"
+    }, {
+      "id": "69a83394-9f8e-4aed-9002-afa3d0ab0b0f",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "e6935136-0831-4964-b4d8-820feaab1e67",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=flash",
+      "targets": [
+        ["id=flash", "id"],
+        ["css=#flash", "css:finder"],
+        ["xpath=//div[@id='flash']", "xpath:attributes"],
+        ["xpath=//div[@id='flash-messages']/div", "xpath:idRelative"],
+        ["xpath=//div/div/div", "xpath:position"]
+      ],
+      "value": "Your username is invalid!\\n×"
+    }]
+  }],
+  "suites": [{
+    "id": "07708c89-27a8-409e-bc92-981717437744",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["85963666-2c46-4283-810d-00e657a9da9a"]
+  }],
+  "urls": ["http://the-internet.herokuapp.com/"],
+  "plugins": []
+}
